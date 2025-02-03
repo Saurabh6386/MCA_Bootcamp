@@ -118,6 +118,7 @@ int countdigit(int n)
 
 // reverse string
 
+
 // string is palindrome or not
 
 // gcd of two numbers
