@@ -1,5 +1,6 @@
 // solving using recursion
 #include <stdio.h>
+#include <string.h>
 
 // factorial of a number
 
@@ -117,12 +118,53 @@ int countdigit(int n)
 }
 
 // reverse string
+char revstr()
+{
+    char s[20];
+    scanf("%s", &s);
 
+    int length = 0;
+    for (int i = 0; s[i] != '\0'; i++)
+    {
+        length += 1;
+    }
+    for (int i = length; i >= 0; i--)
+    {
+        printf("%c", s[i]);
+    }
+}
 
 // string is palindrome or not
+char strpaliornot()
+{
+    char str[20];
+    scanf("%s", str);
+    int length = 0;
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        length++;
+    }
+
+    char rev[20];
+    int j = 0;
+    for (int i = length - 1; i >= 0; i--)
+    {
+        rev[j] = str[i];
+        j++;
+    }
+    rev[j] = '\0';
+
+    if (strcmp(str, rev) == 0)
+    {
+        printf("%s is palindrome ", rev);
+    }
+    else
+    {
+        printf("%s is not palindrome ", rev);
+    }
+}
 
 // gcd of two numbers
-
 
 // binary search
 
@@ -170,6 +212,8 @@ int main()
     // printnto1(9);
     // printf("%d", poweroftwo(8));
     // printf("%d",countdigit(1231234));
-    int arr[] = {1, 2, 3, 4, 5};
-    binarysrch(arr, 3, 5);
+    // int arr[] = {1, 2, 3, 4, 5};
+    // binarysrch(arr, 3, 5);
+    // revstr();
+    strpaliornot();
 }
